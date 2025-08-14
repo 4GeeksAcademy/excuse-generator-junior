@@ -14,7 +14,7 @@ window.onload = function () {
   ];
 
   function setTexts() {
-    elemenExcuse.innerText = aggExcuse(who, action, what, when) + "...";
+    elementExcuse.innerText = aggExcuse(who, action, what, when) + "...";
   }
  
   setTexts();
@@ -26,5 +26,12 @@ function randomText(array){
 
 
 function aggExcuse(who, action, what, when) {
-  let excuseAggArray []
+  let excuseAggArray = [];
+
+  excuseAggArray.push(who[randomText(who)]);
+  excuseAggArray.push(action[randomText(action)]);
+  excuseAggArray.push(what[randomText(what)]);
+  excuseAggArray.push(when[randomText(when)]);
+  console.log(excuseAggArray);
+  return excuseAggArray. join(" ");
 }
